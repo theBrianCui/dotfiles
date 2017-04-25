@@ -37,10 +37,10 @@
 (set-face-foreground 'minibuffer-prompt "white")
 
 ;; Highlight extra whitespace and (optionally) characters exceeding 80 columns
-(require 'whitespace)
+;; (require 'whitespace)
 ;; (setq whitespace-line-column 79)
-(setq whitespace-style '(face empty tabs lines-tail trailing))
-(global-whitespace-mode t)
+;; (setq whitespace-style '(face empty tabs lines-tail trailing))
+;; (global-whitespace-mode t)
 
 ;; Format the entire file
 (defun indent-buffer ()
