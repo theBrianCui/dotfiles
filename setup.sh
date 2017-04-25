@@ -6,7 +6,7 @@
 
 ########## Variables
 
-dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"                    # dotfiles directory
+dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )" # get the absolute location of this shell script, where the synced dotfiles are
 olddir=~/dotfiles_old             # old dotfiles backup directory
 files="bashrc emacs"    # list of files/folders to symlink in homedir
 
@@ -25,7 +25,7 @@ echo "done"
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
 for file in $files; do
     echo "Moving any existing dotfiles from ~ to $olddir"
-    mv ~/.$file $olddir/
+    mv ~/.$file $olddir/ # will print a (nonfatal) error for dotfiles that don't exist yet
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
