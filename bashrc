@@ -118,4 +118,6 @@ dropbox='/mnt/c/Users/Brian/Dropbox/'
 function cd {
     builtin cd "$@" && ls -F
 }
+eval $(ssh-agent)
+ssh-add
 dottest='Success!'
