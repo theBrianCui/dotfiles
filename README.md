@@ -1,5 +1,5 @@
 # dotfiles
-A repository for syncing all of my dotfiles. Original shell script taken from [this blog post](https://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/).
+A repository for syncing all of my dotfiles using GitHub and a shell script. Original shell script taken from [this blog post](https://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/). To synchronize your own dotfiles on GitHub, just take the original `setup.sh` script and follow the instructions below.
 
 ## First-Time Setup
 
