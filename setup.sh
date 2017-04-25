@@ -8,7 +8,7 @@
 
 dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bashrc"    # list of files/folders to symlink in homedir
+files="bashrc emacs"    # list of files/folders to symlink in homedir
 
 ##########
 
