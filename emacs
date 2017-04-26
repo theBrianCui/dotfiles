@@ -4,7 +4,6 @@
 (setq gc-cons-threshold 50000000)
 
 (setq initial-scratch-message "") ;; Uh, I know what Scratch is for
-(setq visible-bell t)             ;; Get rid of the beeps
 
 (when (window-system)
   (tool-bar-mode 0)               ;; Toolbars were only cool with XEmacs
