@@ -8,7 +8,7 @@
 
 dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )" # get the absolute location of this shell script, where the synced dotfiles are
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bashrc bash_profile emacs"    # list of files/folders to symlink in homedir
+files="bashrc bash_profile emacs emacs.d"    # list of files/folders to symlink in homedir
 
 ##########
 
