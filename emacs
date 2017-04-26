@@ -1,3 +1,19 @@
+;; Great inspiration taken from:
+;; https://github.com/howardabrams/dot-files/blob/master/emacs.org
+
+(setq gc-cons-threshold 50000000)
+
+(setq initial-scratch-message "") ;; Uh, I know what Scratch is for
+(setq visible-bell t)             ;; Get rid of the beeps
+
+(when (window-system)
+  (tool-bar-mode 0)               ;; Toolbars were only cool with XEmacs
+  (when (fboundp 'horizontal-scroll-bar-mode)
+    (horizontal-scroll-bar-mode -1))
+  (scroll-bar-mode -1))            ;; Scrollbars are waste screen estate
+
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+
 ;; Half-fix for Mac OSX Option key not being the meta key
 (set-keyboard-coding-system nil)
 
@@ -22,6 +38,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes (quote ("e9df267a1c808451735f2958730a30892d9a2ad6879fb2ae0b939a29ebf31b63" default)))
  '(inhibit-startup-screen t))
 
 ;; Brighten up that god awful dark blue
