@@ -118,6 +118,13 @@ dropbox='/mnt/c/Users/Brian/Dropbox/'
 function cd {
     builtin cd "$@" && ls -F
 }
+
+# git related aliases
+function ga {
+    git add "$@" && git status
+}
+
+# get that ssh-agent going
 eval $(ssh-agent)
 ssh-add
 dottest='Success!'
