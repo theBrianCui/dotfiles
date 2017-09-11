@@ -124,6 +124,22 @@ function ga {
     git add "$@" && git status
 }
 
+function gs {
+    git status "$@"
+}
+
+function gp {
+    git push "$@"
+}
+
+function gpush {
+    git push "$@"
+}
+
+function gpull {
+    git push "$@"
+}
+
 # get that ssh-agent going
 eval $(ssh-agent)
 ssh-add
