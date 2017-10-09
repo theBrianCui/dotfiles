@@ -23,7 +23,7 @@
 (setq-default indent-tabs-mode nil)
 (setq default-tab-width 4)
 (setq c-basic-offset 4)
- 
+
 ;; Move backup files to a temporary directory on disk
 ;; (rather than in the same location as the saved file)
 (setq backup-directory-alist
@@ -74,11 +74,35 @@
       (recompile))))
 
 (define-minor-mode compile-on-save-mode
-    "Minor mode to automatically call `recompile' whenever the
+  "Minor mode to automatically call `recompile' whenever the
 current buffer is saved. When there is ongoing compilation,
 nothing happens."
-    :lighter " CoS"
-    (if compile-on-save-mode
-        (progn  (make-local-variable 'after-save-hook)
-                (add-hook 'after-save-hook 'compile-on-save-start nil t))
-            (kill-local-variable 'after-save-hook)))
+  :lighter " CoS"
+  (if compile-on-save-mode
+      (progn  (make-local-variable 'after-save-hook)
+              (add-hook 'after-save-hook 'compile-on-save-start nil t))
+    (kill-local-variable 'after-save-hook)))
+
+
+
+(setq ;; foreground and background
+ monokai-foreground     "#ABB2BF"
+ monokai-background     "#222222"
+ ;; highlights and comments
+ monokai-comments       "#F8F8F0"
+ monokai-emphasis       "#282C34"
+ monokai-highlight      "#FFB269"
+ monokai-highlight-alt  "#66D9EF"
+ monokai-highlight-line "#1B1D1E"
+ monokai-line-number    "#F8F8F0"
+ ;; colours
+ monokai-blue           "#61AFEF"
+ monokai-cyan           "#56B6C2"
+ monokai-green          "#98C379"
+ monokai-gray           "#3E4451"
+ monokai-violet         "#C678DD"
+ monokai-red            "#E06C75"
+ monokai-orange         "#D19A66"
+ monokai-yellow         "#fac561")
+
+(load-theme 'monokai t)
