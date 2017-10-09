@@ -114,7 +114,21 @@ if ! shopt -oq posix; then
 fi
 
 # finally, a place for all my stuff
-dropbox='/mnt/c/Users/Brian/Dropbox/'
+hostname=$(hostname)
+case "$hostname" in
+    "MONOLITH-RETURNS")
+        dropbox="/mnt/e/Dropbox/"
+        onedrive="/mnt/e/OneDrive/"
+        workspace="/mnt/e/Workspace/" ;;
+    "STRYDER_PHOENIX")
+        dropbox="/mnt/c/Users/Brian/Dropbox/"
+        onedrive="/mnt/c/Users/Brian/OneDrive/" ;;
+esac
+
+export dropbox
+export onedrive
+
+# dropbox='/mnt/c/Users/Brian/Dropbox/'
 function cd {
     builtin cd "$@" && ls -F
 }
