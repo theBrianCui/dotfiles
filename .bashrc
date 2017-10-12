@@ -120,7 +120,7 @@ case "$hostname" in
         dropbox="/mnt/e/Dropbox/"
         onedrive="/mnt/e/OneDrive/"
         workspace="/mnt/c/Workspace/" ;;
-    "STRYDER_PHOENIX")
+    "STRYDER-PHOENIX")
         dropbox="/mnt/c/Users/Brian/Dropbox/"
         onedrive="/mnt/c/Users/Brian/OneDrive/" ;;
 esac
