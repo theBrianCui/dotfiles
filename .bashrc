@@ -151,7 +151,7 @@ function gpush {
 }
 
 function gpull {
-    git push "$@"
+    git pull "$@"
 }
 
 # get that ssh-agent going
