@@ -138,6 +138,10 @@ function ga {
     git add "$@" && git status
 }
 
+function gcm {
+    git commit -m "$@"
+}
+
 function gs {
     git status "$@"
 }
