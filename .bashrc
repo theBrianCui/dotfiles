@@ -135,6 +135,11 @@ function cd {
     builtin cd "$@" && ls -F
 }
 
+# trim whitespace
+function tws {
+    sed -i 's/[[:space:]]*$//' "$@"
+}
+
 # git related aliases
 function ga {
     git add "$@" && git status
