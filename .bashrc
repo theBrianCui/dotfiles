@@ -122,11 +122,13 @@ case "$hostname" in
         workspace="/mnt/c/Workspace/" ;;
     "STRYDER-PHOENIX")
         dropbox="/mnt/c/Users/Brian/Dropbox/"
-        onedrive="/mnt/c/Users/Brian/OneDrive/" ;;
+        onedrive="/mnt/c/Users/Brian/OneDrive/"
+        workspace="/mnt/c/Workspace/" ;;
 esac
 
 export dropbox
 export onedrive
+export workspace
 
 # dropbox='/mnt/c/Users/Brian/Dropbox/'
 function cd {
