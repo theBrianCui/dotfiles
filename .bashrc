@@ -165,6 +165,10 @@ function gpull {
     git pull "$@"
 }
 
+function gd {
+    git diff "$@"
+}
+
 # get that ssh-agent going
 eval $(ssh-agent)
 ssh-add
