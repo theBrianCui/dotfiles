@@ -130,7 +130,6 @@ export dropbox
 export onedrive
 export workspace
 
-# dropbox='/mnt/c/Users/Brian/Dropbox/'
 function cd {
     builtin cd "$@" && ls -F
 }
@@ -138,6 +137,11 @@ function cd {
 # trim whitespace
 function tws {
     sed -i 's/[[:space:]]*$//' "$@"
+}
+
+# what's my ip?
+function whatsmyip {
+    ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1  -d'/'
 }
 
 # git related aliases
