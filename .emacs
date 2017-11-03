@@ -58,6 +58,9 @@
 ;; (setq whitespace-style '(face empty tabs lines-tail trailing))
 ;; (global-whitespace-mode t)
 
+;; show column number too
+(setq column-number-mode t)
+
 ;; Format the entire file
 (defun indent-buffer ()
   "indent whole buffer"
