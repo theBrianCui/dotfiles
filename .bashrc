@@ -174,6 +174,14 @@ function gd {
 }
 
 # get that ssh-agent going
-eval $(ssh-agent)
-ssh-add
+ssh_agent_pid=$(pgrep -u $(whoami) ssh-agent)
+if [ ! -S ~/.ssh/ssh_auth_sock ] || [ -z "$ssh_agent_pid" ] ; then
+  eval `ssh-agent`
+  ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
+fi
+export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
+ssh-add -l > /dev/null || ssh-add
+
+#eval $(ssh-agent)
+#ssh-add
 dottest='Success!'
