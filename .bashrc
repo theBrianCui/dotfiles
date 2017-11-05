@@ -174,13 +174,6 @@ function gd {
 }
 
 # get that ssh-agent going
-# but only once per restart
-# thanks to https://unix.stackexchange.com/a/217223
-if [ ! -S ~/.ssh/ssh_auth_sock ]; then
-  eval `ssh-agent`
-  ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
-fi
-export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
-ssh-add -l > /dev/null || ssh-add
-
+eval $(ssh-agent)
+ssh-add
 dottest='Success!'
