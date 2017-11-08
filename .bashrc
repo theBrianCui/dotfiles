@@ -144,6 +144,41 @@ function whatsmyip {
     ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1  -d'/'
 }
 
+# print on the CS lab machine
+# usage: `csprint FILE <printer-number> [d]`
+function csprint {
+    # $0 will be /bin/bash
+    # $1 will be filename
+    # $2 will be printer number
+    # $3 if set to "d", prints double sided
+    if [[ "$domain" == *'cs.utexas.edu'* ]]; then
+        echo "On a lab machine."
+        return
+    fi
+
+    domain="$(hostname -f)"
+    lfilepath="$1"
+    host="briancui@linux.cs.utexas.edu"
+    printtmp="~/printout"
+
+    # Copy local file into remote directory
+    ssh "$host" "mkdir -p $printtmp"
+    scp $1 "$host:$printtmp"
+
+    # Create print command
+    rfilepath="${printtmp}/$(basename $lfilepath)"
+    print="lpr -Plw${2} ${rfilepath} -o sides="
+    if [[ "$3" == "d" ]]; then
+        print+="two-sided-long-edge"
+    else
+        print+="one-sided"
+    fi
+
+    # Invoke command remotely
+    ssh "$host" "$print; rm $rfilepath"
+    echo "$host:$print"
+}
+
 # git related aliases
 function ga {
     git add "$@" && git status
