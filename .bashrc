@@ -151,12 +151,11 @@ function csprint {
     # $1 will be filename
     # $2 will be printer number
     # $3 if set to "d", prints double sided
-    if [[ "$domain" == *'cs.utexas.edu'* ]]; then
+    if [[ "$(hostname -f)" == *'cs.utexas.edu'* ]]; then
         echo "On a lab machine."
         return
     fi
 
-    domain="$(hostname -f)"
     lfilepath="$1"
     host="briancui@linux.cs.utexas.edu"
     printtmp="~/printout"
