@@ -162,7 +162,7 @@ function csprint {
 
     # Copy local file into remote directory
     ssh "$host" "mkdir -p $printtmp"
-    scp $1 "$host:$printtmp"
+    scp "$1" "$host:$printtmp"
 
     # Create print command
     rfilepath="${printtmp}/$(basename $lfilepath)"
