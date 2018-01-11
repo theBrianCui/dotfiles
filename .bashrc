@@ -124,6 +124,8 @@ case "$hostname" in
         dropbox="/mnt/c/Users/Brian/Dropbox/"
         onedrive="/mnt/c/Users/Brian/OneDrive/"
         workspace="/mnt/c/Workspace/" ;;
+    "ubuntu-quicksilver")
+        workspace="/home/brian/workspace/" ;;
 esac
 
 export dropbox
