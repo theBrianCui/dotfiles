@@ -126,6 +126,8 @@ case "$hostname" in
         workspace="/mnt/c/Workspace/" ;;
     "ubuntu-quicksilver")
         workspace="/home/brian/workspace/" ;;
+    "ubuntu-monolith-returns")
+        workspace="/home/brian/workspace/" ;;
 esac
 
 export dropbox
