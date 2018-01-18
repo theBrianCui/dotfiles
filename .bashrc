@@ -124,6 +124,10 @@ case "$hostname" in
         dropbox="/mnt/c/Users/Brian/Dropbox/"
         onedrive="/mnt/c/Users/Brian/OneDrive/"
         workspace="/mnt/c/Workspace/" ;;
+    "QUICKSILVER")
+        dropbox="/mnt/c/Users/brian/Dropbox/"
+        onedrive="/mnt/c/Users/brian/OneDrive/"
+        workspace="/mnt/c/workspace/" ;;
     "ubuntu-quicksilver")
         workspace="/home/brian/workspace/" ;;
     "ubuntu-monolith-returns")
