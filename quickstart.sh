@@ -16,6 +16,7 @@ sudo apt-get update -y
 
 # setup git ssh keys
 ssh-keygen -q -t rsa -N "" -f ~/.ssh/id_rsa
+hostname
 cat ~/.ssh/id_rsa.pub
 read -p "Press [Enter] to continue"
 
