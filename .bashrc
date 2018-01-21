@@ -215,6 +215,10 @@ function gd {
     git diff "$@"
 }
 
+# clipboard aliases
+alias setclip="xclip -selection c"
+alias getclip="xclip -selection c -o"
+
 # get that ssh-agent going
 ssh_agent_pid=$(pgrep -u $(whoami) ssh-agent)
 if [ ! -S ~/.ssh/ssh_auth_sock ] || [ -z "$ssh_agent_pid" ] ; then
