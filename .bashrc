@@ -142,6 +142,10 @@ function cd {
     builtin cd "$@" && ls -F
 }
 
+function mkcd {
+    mkdir "$@" -p && builtin cd "$@"
+}
+
 # trim whitespace
 function tws {
     sed -i 's/[[:space:]]*$//' "$@"
@@ -152,6 +156,10 @@ function whatsmyip {
     ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1  -d'/'
 }
 
+function cargs {
+    echo "$#"
+}
+
 # print on the CS lab machine
 # usage: `csprint FILE <printer-number> [d]`
 function csprint {
@@ -159,6 +167,11 @@ function csprint {
     # $1 will be filename
     # $2 will be printer number
     # $3 if set to "d", prints double sided
+    if [[ $# -eq 0 ]] ; then
+        echo "usage: csprint FILE <printer-number> [d]"
+        return
+    fi
+
     if [[ "$(hostname -f)" == *'cs.utexas.edu'* ]]; then
         echo "On a lab machine."
         return
