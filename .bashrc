@@ -156,12 +156,17 @@ function whatsmyip {
     ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1  -d'/'
 }
 
-function cargs {
-    echo "$#"
+# mount a VirtualBox shared folder
+function vbmount {
+    if [[ $# -eq 0 ]] ; then
+        echo "usage: vbmount <SHARED-DIR-NAME> <LOCAL-DIR>"
+        return
+    fi
+    mkdir -p "$2" && sudo mount -t vboxsf -o uid=$UID,gid=$(id -g) "$1" "$2"
 }
 
 # print on the CS lab machine
-# usage: `csprint FILE <printer-number> [d]`
+# usage: `csprint <FILE> <printer-number> [d]`
 function csprint {
     # $0 will be /bin/bash
     # $1 will be filename
