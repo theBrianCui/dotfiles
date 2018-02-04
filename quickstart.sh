@@ -1,7 +1,7 @@
 cd ~
 
 # install git and essentials
-sudo apt-get install -y git curl xclip
+sudo apt-get install -y git curl xclip dos2unix
 sudo apt-get install -y emacs
 sudo apt-get install -y python3-pip python3-dev python-virtualenv
 git config --global user.name "Brian Cui"
