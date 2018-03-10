@@ -119,7 +119,7 @@ case "$hostname" in
     "MONOLITH-RETURNS")
         dropbox="/mnt/e/Dropbox/"
         onedrive="/mnt/e/OneDrive/"
-        workspace="/mnt/c/Workspace/" ;;
+        workspace="/mnt/c/workspace/" ;;
     "STRYDER-PHOENIX")
         dropbox="/mnt/c/Users/Brian/Dropbox/"
         onedrive="/mnt/c/Users/Brian/OneDrive/"
