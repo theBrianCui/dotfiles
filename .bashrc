@@ -138,17 +138,24 @@ export dropbox
 export onedrive
 export workspace
 
+# always ls after cd
 function cd {
     builtin cd "$@" && ls -F
 }
 
+# make a directory and cd
 function mkcd {
     mkdir "$@" -p && builtin cd "$@"
 }
 
-# trim whitespace
+# trim whitespace in a file
 function tws {
     sed -i 's/[[:space:]]*$//' "$@"
+}
+
+# grep through history
+function hgrep {
+    history | grep "$@" | head -n -1
 }
 
 # what's my ip?
