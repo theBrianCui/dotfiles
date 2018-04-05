@@ -4,6 +4,7 @@ cd ~
 sudo apt-get install -y git curl xclip dos2unix
 sudo apt-get install -y emacs
 sudo apt-get install -y python3-pip python3-dev python-virtualenv
+sudo apt-get install -y default-jre default-jdk
 git config --global user.name "Brian Cui"
 git config --global user.email "brian.cui@live.com"
 
