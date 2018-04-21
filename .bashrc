@@ -240,6 +240,10 @@ function gd {
     git diff "$@"
 }
 
+function gcloneme {
+    git clone "git@github.com:theBrianCui/${1}.git"
+}
+
 # clipboard aliases
 alias setclip="xclip -selection c"
 alias getclip="xclip -selection c -o"
