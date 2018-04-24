@@ -180,7 +180,7 @@ function csprint {
     # $2 will be printer number
     # $3 if set to "d", prints double sided
     if [[ $# -eq 0 ]] ; then
-        echo "usage: csprint FILE <printer-number> [d]"
+        echo "usage: csprint <FILE> <printer-number> [d]"
         return
     fi
 
@@ -241,6 +241,11 @@ function gd {
 }
 
 function gcloneme {
+    if [[ $# -eq 0 ]] ; then
+        echo "usage: gcloneme <repo-name>"
+        return
+    fi
+
     git clone "git@github.com:theBrianCui/${1}.git"
 }
 
