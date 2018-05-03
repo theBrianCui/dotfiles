@@ -18,3 +18,9 @@ The script works by iterating through all files (and folders) in the repository 
 You may need to `chmod +x setup.sh` if you get a Permission Denied error when running the shell script.
 
 In `bash`, to re-load `.bashrc` configuration without logging out, run `source ~/.bashrc`.
+
+## Quickstart
+
+```
+wget https://raw.githubusercontent.com/theBrianCui/dotfiles/master/quickstart.sh && chmod +x quickstart.sh && ./quickstart.sh
+```
