@@ -128,6 +128,10 @@ case "$hostname" in
         dropbox="/mnt/c/Users/brian/Dropbox/"
         onedrive="/mnt/c/Users/brian/OneDrive/"
         workspace="/mnt/c/workspace/" ;;
+    "X1")
+        dropbox="/mnt/c/Users/brian/Dropbox/"
+        onedrive="/mnt/c/Users/brian/OneDrive/"
+        workspace="/mnt/c/Users/brian/workspace/" ;;
     "ubuntu-quicksilver")
         workspace="/home/brian/workspace/" ;;
     "ubuntu-monolith-returns")
