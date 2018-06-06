@@ -2,7 +2,10 @@
 cd ~
 
 # install git and essentials
-sudo apt-get install -y git curl xclip dos2unix
+sudo apt-get install -y git
+sudo apt-get install -y curl
+sudo apt-get install -y xclip
+sudo apt-get install -y dos2unix
 sudo apt-get install -y emacs
 sudo apt-get install -y python-pip python-dev python-virtualenv
 sudo apt-get install -y python3-pip python3-dev python-virtualenv
@@ -22,9 +25,13 @@ sudo apt-get update -y
 
 # setup git ssh keys
 ssh-keygen -q -t rsa -N "" -f ~/.ssh/id_rsa
+echo ""
 hostname
+echo ""
 cat ~/.ssh/id_rsa.pub
-read -p "Press [Enter] to continue"
+cat ~/.ssh/id_rsa.pub | xclip -selection c
+echo ""
+read -p "SSH key copied to clipboard. Press [Enter] to continue"
 
 # setup dotfiles
 git clone git@github.com:theBrianCui/dotfiles.git
