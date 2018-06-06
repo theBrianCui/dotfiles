@@ -7,6 +7,8 @@ sudo apt-get install -y emacs
 sudo apt-get install -y python-pip python-dev python-virtualenv
 sudo apt-get install -y python3-pip python3-dev python-virtualenv
 sudo apt-get install -y default-jre default-jdk
+sudo apt-get install -y gcc
+sudo apt-get install -y clang
 sudo apt-get install -y gdebi-core
 git config --global user.name "Brian Cui"
 git config --global user.email "brian.cui@live.com"
