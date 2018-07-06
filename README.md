@@ -1,15 +1,19 @@
 # dotfiles
-A repository for syncing all of my dotfiles using GitHub and a super simple shell script. To synchronize your own dotfiles on GitHub, first clone this repository (or directly steal `setup.sh` into a new fresh repo) and follow the instructions below.
+A repository for syncing all of my dotfiles using GitHub and a super simple shell script. 
+
+To synchronize your own dotfiles on GitHub, first clone this repository (or copy `setup.sh` into a new fresh repo) and follow the instructions below.
 
 ## First-Time Setup
 
- 0. Clone the repository locally.
- 1. For every new dotfile (and folder) you with to sync, add them to the repository with the same name (include the `.`).
+ 0. Clone the repository.
+ 1. For every dotfile (and folder) you with to sync, add them to the repository (include the `.`).
  2. Run `./setup.sh`. The script will backup the dotfiles in your existing home directory into `~/dotfiles_old` and then create symbolic links from your home directory to the dotfiles in the respository.
 
-That's it! Now whenever you update a dotfile in the repository (or `git pull` new changes), your "dotfiles" (actually symbolic links) in `~` will get updated too.
+That's it! Now whenever you update a dotfile in the repository, just commit and push your changes. Then `git pull` on every other computer to keep them in sync.
 
-For all other machines you wish to sync your dotfiles to, just clone the repository and run `./setup.sh` to set up the symlinks. Making changes to dotfiles will *not* require you to run the script again, however, adding new dotfiles will require you to do so (in order to set up the new symbolic links).
+For all other machines you wish to sync your dotfiles to, just clone the repository and run `./setup.sh` once to set up the symlinks. In the future, `git push` and `git pull` to receive updates.
+
+Making changes to dotfiles will *not* require you to run the script again, however, adding new dotfiles will require you to do so (in order to set up the new symbolic links).
 
 ## Notes
 
@@ -19,7 +23,9 @@ You may need to `chmod +x setup.sh` if you get a Permission Denied error when ru
 
 In `bash`, to re-load `.bashrc` configuration without logging out, run `source ~/.bashrc`.
 
-## Quickstart
+## Quickstart Script
+
+The `quickstart.sh` script also included in this repository is a run-once script for setting up my complete devleoper environment on a new installation of Ubuntu. The script is responsible for installing software such as `git`, `python`, and `emacs`, generating an SSH key for GitHub, and synchronizing the dotfiles in this repository.
 
 ```
 wget https://raw.githubusercontent.com/theBrianCui/dotfiles/master/quickstart.sh && chmod +x quickstart.sh && ./quickstart.sh
