@@ -221,7 +221,7 @@ function ga {
 }
 
 function gcm {
-    git commit -m "$@"
+    git commit -m "$@" && git status
 }
 
 function gs {
@@ -242,6 +242,14 @@ function gpull {
 
 function gd {
     git diff "$@"
+}
+
+function gb {
+    git branch "$@"
+}
+
+function gba {
+    git branch -a "$@"
 }
 
 function gcloneme {
