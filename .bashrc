@@ -228,6 +228,10 @@ function gs {
     git status "$@"
 }
 
+function gra {
+    git remote add "$@"
+}
+
 function gp {
     git push "$@"
 }
