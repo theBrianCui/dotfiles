@@ -1,4 +1,5 @@
 #!/bin/bash
+show -e
 cd ~
 
 # install git and essentials
