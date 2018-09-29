@@ -136,7 +136,7 @@ case "$hostname" in
         workspace="/home/brian/workspace/" ;;
     "ubuntu-monolith-returns")
         workspace="/home/brian/workspace/" ;;
-    "ubuntu-x1-vmw")
+    "ubuntu-x1-vmw" | "ubuntu-monolith-vmw")
         dropbox="/mnt/hgfs/Dropbox/"
         onedrive="/mnt/hgfs/OneDrive/"
         workspace="/home/brian/workspace/" ;;
