@@ -273,6 +273,9 @@ function gcloneme {
 alias setclip="xclip -selection c"
 alias getclip="xclip -selection c -o"
 
+# always start emacs in terminal mode
+alias emacs="emacs -nw"
+
 # get that ssh-agent going
 ssh_agent_pid=$(pgrep -u $(whoami) ssh-agent)
 if [ ! -S ~/.ssh/ssh_auth_sock ] || [ -z "$ssh_agent_pid" ] ; then

@@ -14,8 +14,13 @@ sudo apt-get install -y default-jre default-jdk
 sudo apt-get install -y gcc
 sudo apt-get install -y clang
 sudo apt-get install -y gdebi-core
+sudo apt-get install -y gcp
+
+# configure git
+email="brian.cui"
+domain="@live.com"
 git config --global user.name "Brian Cui"
-git config --global user.email "brian.cui@live.com"
+git config --global user.email "$email$domain"
 
 # install node.js
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
