@@ -148,7 +148,7 @@ export workspace
 
 # always ls after cd
 function cd {
-    builtin cd "$@" && ls -F
+    builtin cd "$@" && ls -aF
 }
 
 # make a directory and cd
