@@ -269,6 +269,16 @@ function gcloneme {
     git clone "git@github.com:theBrianCui/${1}.git"
 }
 
+function herokupush {
+    if [[ $# -eq 0 ]] ; then
+        echo "usage: herokupush <app-name>"
+        return
+    fi
+
+    heroku git:remote -a "${1}"
+    git push heroku master
+}
+
 # clipboard aliases
 alias setclip="xclip -selection c"
 alias getclip="xclip -selection c -o"
