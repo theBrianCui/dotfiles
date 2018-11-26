@@ -14,7 +14,7 @@ sudo apt-get install -y default-jre default-jdk
 sudo apt-get install -y gcc
 sudo apt-get install -y clang
 sudo apt-get install -y gdebi-core
-sudo apt-get install -y gcp
+sudo apt-get install -y gcp tree
 
 # configure git
 email="brian.cui"
