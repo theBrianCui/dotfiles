@@ -1,11 +1,25 @@
 #!/bin/bash
 show -e
+echo "Running quickstart script..."
 cd ~
+clear
+
+WINDOWS=0
+if [ -e "/mnt/c/Windows" ]
+then
+  WINDOWS=1
+fi
+
+if [ "$WINDOWS" -eq 1 ]
+then
+  echo "Using WSL"
+else
+  echo "Not using WSL"
+fi
 
 # install git and essentials
 sudo apt-get install -y git
 sudo apt-get install -y curl
-sudo apt-get install -y xclip
 sudo apt-get install -y dos2unix
 sudo apt-get install -y emacs
 sudo apt-get install -y python-pip python-dev python-virtualenv
@@ -15,6 +29,11 @@ sudo apt-get install -y gcc
 sudo apt-get install -y clang
 sudo apt-get install -y gdebi-core
 sudo apt-get install -y gcp tree
+
+if [ "$WINDOWS" -eq 0 ]
+then
+  sudo apt-get install -y xclip
+fi
 
 # configure git
 email="brian.cui"
@@ -30,13 +49,20 @@ sudo apt-get install -y nodejs
 sudo apt-get update -y
 
 # setup git ssh keys
+echo "Creating SSH key..."
 ssh-keygen -q -t rsa -N "" -f ~/.ssh/id_rsa
 echo ""
 hostname
 echo ""
 cat ~/.ssh/id_rsa.pub
-cat ~/.ssh/id_rsa.pub | xclip -selection c
 echo ""
+
+if [ "$WINDOWS" -eq 1 ]
+then
+  cat ~/.ssh/id_rsa.pub | clip.exe
+else
+  cat ~/.ssh/id_rsa.pub | xclip -selection c
+fi
 read -p "SSH key copied to clipboard. Press [Enter] to continue"
 
 # setup dotfiles
