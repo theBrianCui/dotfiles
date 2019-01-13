@@ -50,6 +50,7 @@ sudo apt-get update -y
 
 # setup git ssh keys
 echo "Creating SSH key..."
+mkdir -p ~/.ssh/
 ssh-keygen -q -t rsa -N "" -f ~/.ssh/id_rsa
 echo ""
 hostname
