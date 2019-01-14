@@ -116,10 +116,10 @@ fi
 # finally, a place for all my stuff
 hostname=$(hostname)
 case "$hostname" in
-    "MONOLITH-RETURNS")
-        dropbox="/mnt/e/Dropbox/"
-        onedrive="/mnt/e/OneDrive/"
-        workspace="/mnt/c/workspace/" ;;
+    "MONOLITH-RYZEN")
+        dropbox="/mnt/c/Users/Brian/Dropbox/"
+        onedrive="/mnt/c/Users/Brian/OneDrive/"
+        workspace="/mnt/c/Users/Brian/workspace/" ;;
     "STRYDER-PHOENIX")
         dropbox="/mnt/c/Users/Brian/Dropbox/"
         onedrive="/mnt/c/Users/Brian/OneDrive/"
