@@ -29,6 +29,7 @@ sudo apt-get install -y gcc
 sudo apt-get install -y clang
 sudo apt-get install -y gdebi-core
 sudo apt-get install -y gcp tree
+sudo apt-get install -y awscli
 
 if [ "$WINDOWS" -eq 0 ]
 then
