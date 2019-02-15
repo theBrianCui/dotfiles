@@ -260,6 +260,10 @@ function gba {
     git branch -a "$@"
 }
 
+function gsync {
+    git pull && git push
+}
+
 function gcloneme {
     if [[ $# -eq 0 ]] ; then
         echo "usage: gcloneme <repo-name>"
