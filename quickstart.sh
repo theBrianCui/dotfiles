@@ -18,6 +18,7 @@ else
 fi
 
 # install git and essentials
+sudo apt-get update
 sudo apt-get install -y git
 sudo apt-get install -y curl
 sudo apt-get install -y dos2unix
@@ -30,6 +31,7 @@ sudo apt-get install -y clang
 sudo apt-get install -y gdebi-core
 sudo apt-get install -y gcp tree
 sudo apt-get install -y awscli
+sudo apt-get install -y shellcheck
 
 if [ "$WINDOWS" -eq 0 ]
 then
