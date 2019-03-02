@@ -114,28 +114,19 @@ if ! shopt -oq posix; then
 fi
 
 # finally, a place for all my stuff
+dropbox=""
+onedrive=""
+workspace=""
 hostname=$(hostname)
 case "$hostname" in
     "MONOLITH-RYZEN")
         dropbox="/mnt/c/Users/Brian/Dropbox/"
         onedrive="/mnt/c/Users/Brian/OneDrive/"
         workspace="/mnt/c/Users/Brian/workspace/" ;;
-    "STRYDER-PHOENIX")
-        dropbox="/mnt/c/Users/Brian/Dropbox/"
-        onedrive="/mnt/c/Users/Brian/OneDrive/"
-        workspace="/mnt/c/Workspace/" ;;
-    "QUICKSILVER")
-        dropbox="/mnt/c/Users/brian/Dropbox/"
-        onedrive="/mnt/c/Users/brian/OneDrive/"
-        workspace="/mnt/c/workspace/" ;;
     "X1")
         dropbox="/mnt/c/Users/brian/Dropbox/"
         onedrive="/mnt/c/Users/brian/OneDrive/"
         workspace="/mnt/c/Users/brian/workspace/" ;;
-    "ubuntu-quicksilver")
-        workspace="/home/brian/workspace/" ;;
-    "ubuntu-monolith-returns")
-        workspace="/home/brian/workspace/" ;;
     "ubuntu-x1-vmw" | "ubuntu-monolith-vmw")
         dropbox="/mnt/hgfs/Dropbox/"
         onedrive="/mnt/hgfs/OneDrive/"
@@ -145,6 +136,15 @@ esac
 export dropbox
 export onedrive
 export workspace
+
+function workspace {
+    if [[ "$workspace" != "" ]]
+    then
+        cd "$workspace"
+        return 0
+    fi
+    cd "$HOME/workspace"
+}
 
 # always ls after cd
 function cd {
