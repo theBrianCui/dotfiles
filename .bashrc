@@ -131,6 +131,8 @@ case "$hostname" in
         dropbox="/mnt/hgfs/Dropbox/"
         onedrive="/mnt/hgfs/OneDrive/"
         workspace="/home/brian/workspace/" ;;
+    "BRCUI-ONE")
+        workspace="/mnt/d/workspace/" ;;
 esac
 
 export dropbox
