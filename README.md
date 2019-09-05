@@ -28,5 +28,5 @@ In `bash`, to re-load `.bashrc` configuration without logging out, run `source ~
 The `quickstart.sh` script also included in this repository is a run-once script for setting up my complete devleoper environment on a new installation of Ubuntu. The script is responsible for installing software such as `git`, `python`, and `emacs`, generating an SSH key for GitHub, and synchronizing the dotfiles in this repository.
 
 ```
-sudo wget https://raw.githubusercontent.com/theBrianCui/dotfiles/master/quickstart.sh && sudo chmod +x quickstart.sh && sudo ./quickstart.sh
+sudo wget https://raw.githubusercontent.com/theBrianCui/dotfiles/master/quickstart.sh && sudo chmod +x quickstart.sh && ./quickstart.sh
 ```
