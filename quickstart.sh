@@ -17,6 +17,9 @@ else
   echo "Not using WSL"
 fi
 
+# point to US apt-get mirror
+sudo sed -i "s/archive.ubuntu.com/us.archive.ubuntu.com/" /etc/apt/sources.list
+
 # install git and essentials
 sudo apt-get update
 sudo apt-get install -y git
