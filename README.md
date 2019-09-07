@@ -30,3 +30,7 @@ The `quickstart.sh` script also included in this repository is a run-once script
 ```
 sudo wget https://raw.githubusercontent.com/theBrianCui/dotfiles/master/quickstart.sh && sudo chmod +x quickstart.sh && ./quickstart.sh
 ```
+
+### WSL chmod
+
+[https://github.com/Microsoft/WSL/issues/81#issuecomment-400597679](https://github.com/Microsoft/WSL/issues/81#issuecomment-400597679)
