@@ -17,6 +17,9 @@ else
   echo "Not using WSL"
 fi
 
+# point to US apt-get mirror
+sudo sed -i "s/archive.ubuntu.com/us.archive.ubuntu.com/" /etc/apt/sources.list
+
 # install git and essentials
 sudo apt-get update
 sudo apt-get install -y git
@@ -25,7 +28,7 @@ sudo apt-get install -y dos2unix
 sudo apt-get install -y emacs
 sudo apt-get install -y python-pip python-dev python-virtualenv
 sudo apt-get install -y python3-pip python3-dev python-virtualenv
-sudo apt-get install -y default-jre default-jdk
+# sudo apt-get install -y default-jre default-jdk
 sudo apt-get install -y gcc
 sudo apt-get install -y clang
 sudo apt-get install -y gdebi-core
