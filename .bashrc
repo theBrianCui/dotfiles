@@ -238,14 +238,17 @@ function gra {
 
 function gp {
     git push "$@"
+    git status
 }
 
 function gpush {
     git push "$@"
+    git status
 }
 
 function gpull {
     git pull "$@"
+    git status
 }
 
 function gd {
@@ -262,6 +265,7 @@ function gba {
 
 function gsync {
     git pull && git push
+    git status
 }
 
 function gcloneme {
