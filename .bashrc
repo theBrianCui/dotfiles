@@ -133,6 +133,8 @@ case "$hostname" in
         workspace="/home/brian/workspace/" ;;
     "BRCUI-ONE")
         workspace="/mnt/d/workspace/" ;;
+    "DESKTOP-LQ6QN87")
+        workspace="/mnt/c/Users/brcui/workspace/" ;;
 esac
 
 export dropbox
